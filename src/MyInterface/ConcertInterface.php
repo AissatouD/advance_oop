@@ -10,7 +10,7 @@ interface ConcertInterface
 
     public function setConcertName();
 
-    public function setConcertDate();
+    public function setConcertDate($concertName);
 
-    public function setConcertLocation();
+    public function setConcertLocation($concertName);
 }

@@ -10,5 +10,5 @@ interface InstrumentsInterface
 
     public function setInstrumentName();
 
-    public function setInstrumentFamilly();
+    public function setInstrumentFamilly($instruments);
 }

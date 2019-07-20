@@ -7,7 +7,7 @@ namespace MyInterface;
 
 interface GroupInterface
 {
-    public function setGroup($arg);
+    public function setGroup();
 
-    public function setGroup_members();
+
 }
