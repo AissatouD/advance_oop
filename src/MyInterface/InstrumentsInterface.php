@@ -8,4 +8,7 @@ namespace MyInterface;
 interface InstrumentsInterface
 {
 
+    public function setInstrumentName();
+
+    public function setInstrumentFamilly();
 }

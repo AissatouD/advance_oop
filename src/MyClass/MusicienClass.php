@@ -17,8 +17,37 @@ class MusicienClass extends HumanClass  implements InstrumentsInterface, Concert
     private $concert;
 
     public function __construct(){
+        parent::__construct();
 
     }
 
+
+    public function setGroup($arg){
+
+    };
+
+    public function setGroup_members(){
+
+    };
+
+    public function setInstrumentName(){
+
+    };
+
+    public function setInstrumentFamilly(){
+
+    };
+
+    public function setConcertName(){
+
+    };
+
+    public function setConcertDate(){
+
+    };
+
+    public function setConcertLocation(){
+
+    };
 
 }

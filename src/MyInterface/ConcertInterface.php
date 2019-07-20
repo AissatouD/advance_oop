@@ -8,4 +8,9 @@ namespace MyInterface;
 interface ConcertInterface
 {
 
+    public function setConcertName();
+
+    public function setConcertDate();
+
+    public function setConcertLocation();
 }

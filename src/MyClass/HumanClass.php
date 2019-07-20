@@ -7,71 +7,107 @@ namespace MyClass;
 
 class HumanClass
 {
+
     /**
-     * @firstname type="string
+     * @var array
      */
     protected $firstname;
 
     /**
-     * @lastname type="string"
+     * @var array
      */
     protected $lastname;
+
 
     /**
      * @gender type="array"
      */
     protected $gender;
 
+    public function __construct(){
+
+    $this->firstname = $this->setFirstname();
+    $this->lastname = $this->setLastname();
+    $this->gender = $this->setGender($this->firstname);
+
+    }
+
+
+
     /**
-     * @return mixed
+     * @return array
      */
-    public function getFirstname()
+    public function setFirstname()
     {
-        return $this->firstname;
+        $firstname = array(
+            'Jessy',
+            'Gabriella',
+            'Alicia',
+            'Fally',
+            'John',
+            'Mickael');
+        return $firstname[rand(0, count($firstname) -1)];
     }
 
     /**
-     * @param mixed $firstname
+     * @return array
      */
-    public function setFirstname($firstname)
+    public function setLastname()
     {
-        $this->firstname = $firstname;
+        $lastname = array(
+            'Glynne',
+            'Drille',
+            'Smith',
+            'Mccartney',
+            'Williams',
+            'Allen'
+        );
+
+        return $lastname[rand(0, count($lastname) -1)];
     }
 
     /**
-     * @return mixed
+     * @param $firstname
+     * @return array
+     */
+    public function setGender($firstname)
+    {
+        $gender= array(
+            'Homme',
+            'Femme'
+        );
+
+        if($firstname === $firstname[0] || $firstname[1] || $firstname[2] ){
+            return  $this->gender = $gender[1];
+        }
+
+        return $this->gender[0];
+    }
+
+    /**
+     * @return array
      */
     public function getLastname()
     {
         return $this->lastname;
     }
 
-    /**
-     * @param mixed $lastname
-     */
-    public function setLastname($lastname)
-    {
-        $this->lastname = $lastname;
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getGender()
-    {
-        return $this->gender;
-    }
 
     /**
      * @return array
      */
-    public function setGender()
+    public function getFirstname()
     {
-        return $this->gender = array([
-            'Man'=>1,
-            'Woman'=>2
-        ]);
+        return $this->firstname;
     }
 
 
+    /**
+     * @return array
+     */
+    public function getGender(){
+
+        return $this->gender;
+    }
 }
