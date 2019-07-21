@@ -2,7 +2,7 @@
 
 declare(strict_type=1);
 
-namespace MyClass;
+namespace classes;
 
 
 class HumanClass

@@ -1,7 +1,7 @@
 <?php
 declare(strict_type=1);
 
-namespace MyClass ;
+namespace classes ;
 
 
 use MyInterface\ConcertInterface;
